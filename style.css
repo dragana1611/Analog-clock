@@ -1,5 +1,5 @@
 html {
-  background: #018ded url(images/abstract-light.jpg);
+  background: #018ded url(images/time02.jpg) no-repeat center center;
   background-size: cover;
   font-family: "helvetica neue";
   text-align: center;
@@ -32,13 +32,13 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  transform: translateY(-3px); /* account for the height of the clock hands */
+  transform: translate(-6px); /* account for the height of the clock hands */
 }
 
 .hand {
   width: 50%;
   height: 6px;
-  background: black;
+  background: rgba(226, 226, 226, 0.8);
   position: absolute;
   top: 50%;
   transform-origin: 100%;
@@ -49,7 +49,7 @@ body {
 .hour-hand {
   width: 40%;
   position: absolute;
-  left: 20px;
+  left: 30px;
   transform-origin: 100%;
   transform: translateY(-10px);
   transform: rotate(90deg);
@@ -58,11 +58,45 @@ body {
   background-color: crimson;
 }
 .center {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   background-color: rgb(27, 189, 253);
   position: absolute;
   top: 47%;
-  left: 46%;
+  left: 45%;
+}
+
+/* Snow*/
+
+.snow-bg {
+  position: relative;
+}
+
+.snow-bg:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-image: url("https://library.elementor.com/resources/christmas-snow-effect/s1.png"),
+    url("https://library.elementor.com/resources/christmas-snow-effect/s2.png"),
+    url("https://library.elementor.com/resources/christmas-snow-effect/s3.png");
+  animation: snow 10s linear infinite;
+}
+
+@keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px;
+  }
 }
