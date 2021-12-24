@@ -38,7 +38,7 @@ body {
 .hand {
   width: 50%;
   height: 6px;
-  background: rgba(226, 226, 226, 0.8);
+  background: rgba(116, 116, 116, 0.8);
   position: absolute;
   top: 50%;
   transform-origin: 100%;
